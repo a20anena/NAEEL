@@ -14,6 +14,13 @@
       2 NAS:
       4 TAS:
 
+5. 348 structures of  protein(P68871) are in the Protein Data Bank.
+-  Following were solved with each experimental method 
+40  EM
+2  Neutron
+2  NMR
+304  X-ray
+6. 628 BASE PAIR long is mRNA, according to the GenBank record.
 
 
 ## COMMAND USED PART 1
@@ -21,9 +28,9 @@
 2. grep "^ID" protein.txt
 3. grep "^DR   RefSeq" protein.txt 
 4. grep "^DR   GO;" protein.txt | grep -oE "[A-Z]{2,3}:" | sort | uniq -c
-
-
-
+5. grep -c "^DR   PDB;" protein.txt
+- grep "^DR   PDB;" protein.txt | cut -d";" -f3 | sort | uniq -c
+6. grep "LOCUS" mRNA.gb
 
 
 
@@ -35,7 +42,6 @@
 
 
 ## COMMAND USED TO DOWNLOAD FILES
-1.  curl "https://rest.uniprot.org/uniprotkb/P68871.fasta" \
-> protein.fasta
+1.  curl "https://rest.uniprot.org/uniprotkb/P68871.fasta" \ > protein.fasta
 2. curl "https://rest.uniprot.org/uniprotkb/P68871.txt" > protein.txt
-3. 
+3. curl "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=NM_000518.5&rettype=gb&retmode=text" > mRNA.gb

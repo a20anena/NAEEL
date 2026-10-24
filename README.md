@@ -22,6 +22,9 @@
 304  X-ray
 6. 628 BASE PAIR long is mRNA, according to the GenBank record.
 
+## Comment on distribution of its evidence codes
+25 GO annotation was found from the protein P68871. 4 IBA from them are Inferred from Biological aspect of Ancestor. and its trust level is  Moderate (phylogenetic inference)' 1 IMP FROM THEM IS Inferred from Mutant Phenotype, and trust level on its high. 1 IEA from them is Inferred from Electronic Annotation, an trust level is low because its fully automated, no manual review.But from all GO annotation, we found 10 IDA is Inferred from Direct Assay and its trust level is very high because its come from specific biochemical assay.           
+ most GO annotations for non-model organisms are transferred computationally from model organisms based on sequence similarity. The accuracy of these transferred annotations depends on the degree of functional conservation between the organisms, which is not always high — particularly for organism-specific biological processes.
 
 ## COMMAND USED PART 1
 1. grep -v ">" protein.fasta | tr -d '\n' | wc -c

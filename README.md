@@ -48,3 +48,4 @@
 1.  curl "https://rest.uniprot.org/uniprotkb/P68871.fasta" \ > protein.fasta
 2. curl "https://rest.uniprot.org/uniprotkb/P68871.txt" > protein.txt
 3. curl "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=NM_000518.5&rettype=gb&retmode=text" > mRNA.gb
+4. curl "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=NM_000518.5&rettype=fasta&retmode=text" > mRNA.fasta

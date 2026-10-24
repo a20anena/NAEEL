@@ -77,3 +77,13 @@ Commands:
 
 
 
+## Part 3 (interpretation)
+
+1. 823 hits have an E-value below 1e-10.
+2. 76 hits have at least 90 % identity
+3. 
+## Command used in part 3
+
+1. awk -F'\t' '$11 < 1e-10' blastp_local.txt | wc -l
+2. awk -F'\t' '$3 >= 90' blastp_local.txt | wc -l
+3. awk -F'\t' '$2 != "P68873"' blastp_local.txt | head -1

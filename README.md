@@ -81,9 +81,16 @@ Commands:
 
 1. 823 hits have an E-value below 1e-10.
 2. 76 hits have at least 90 % identity
-3. 
+3. P68873 best non-self hit,  percenent identity is 100% and e-value is  6.56e-106.
+- Organism is Pan troglodytes (Chimpanzee).
+- P21198 hit has the lowest percent identity. and its e-value is   1.34e-10 .
+-  Protein is Globin-2 Organism is Mordacia mordax (Southern hemisphere lamprey).
+4. My protein is P68871 . I got 823 hits below 1e-10 e -value. 72 hits have at least 90 % identity. i found P68873 the best non-self hit, percenent identity is 100% and e-value is  6.56e-106 and organism it comes from by fetching its UniProt entry is Organism is Pan troglodytes (Chimpanzee). and P21198 hit has the lowest percent identity. and its e-value is   1.34e-10 .and organism is Mordacia mordax. So the protein is highly conserved in close relatives. 
 ## Command used in part 3
 
 1. awk -F'\t' '$11 < 1e-10' blastp_local.txt | wc -l
 2. awk -F'\t' '$3 >= 90' blastp_local.txt | wc -l
 3. awk -F'\t' '$2 != "P68873"' blastp_local.txt | head -1
+- "https://rest.uniprot.org/uniprotkb/P68873.txt" | grep "^OS"
+- sort -t$'\t' -k3,3g blastp_local.txt | head -1
+- curl -s "https://rest.uniprot.org/uniprotkb/P21198.txt" | grep "^DE\|^OS"
